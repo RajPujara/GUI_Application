@@ -162,9 +162,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label2.Location = new System.Drawing.Point(280, 40);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 25);
+            this.label2.Size = new System.Drawing.Size(129, 25);
             this.label2.TabIndex = 7;
-            this.label2.Text = "Texture:";
+            this.label2.Text = "Texture123:";
             // 
             // showtexturebox
             // 
