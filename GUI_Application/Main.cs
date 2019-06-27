@@ -19,16 +19,13 @@ namespace GUI_Application
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(colorDialog1.ShowDialog() !=System.Windows.Forms.DialogResult.Cancel)
-            {
-                
-            }
+            
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            drawareapanel.Refresh();
-            this.drawareapanel.backgroundImage = null;
+            //drawareapanel.Refresh();
+            //this.drawareapanel.backgroundImage = null;
         }
 
         private void openImageToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,23 +33,23 @@ namespace GUI_Application
             // open file dialog
             OpenFileDialog open = new OpenFileDialog();
             // image filter
-            open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
-            if (open.ShowDialog() == DialogResult.OK)
+            //open.Filter = "Image Files(*.jpg; *.jpeg; *.gif; *.bmp)|*.jpg; *.jpeg; *.gif; *.bmp";
+            //if (open.ShowDialog() == DialogResult.OK)
             {
                 // display image in picture box
-                PictureBox.image = new Bitmap(open.FileName);
+              //  PictureBox.image = new Bitmap(open.FileName);
                 // image file path
-                textBox1.Text = open.FileName;
+              //  textBox1.Text = open.FileName;
 
             }
         }
 
         private void openTextToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            System.IO.StringReader OpenFile = new System.IO.StringReader(openFileDialog1.FileName);
-            richTextBox1.Text = OpenFile.ReadToEnd();
-            OpenFile.Close();
+            //openFileDialog1.ShowDialog();
+            //System.IO.StringReader OpenFile = new System.IO.StringReader(openFileDialog1.FileName);
+            // richTextBox1.Text = OpenFile.ReadToEnd();
+            //OpenFile.Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -85,6 +82,11 @@ namespace GUI_Application
         private void btnclose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void openImageToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            
         }
     }
 }
