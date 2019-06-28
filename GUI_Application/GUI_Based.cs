@@ -40,7 +40,9 @@ namespace GUI_Application
 
         private void btn_elipse_Click(object sender, EventArgs e)
         {
-            selectshape = 4;
+            //selectshape = 4;
+
+
         }
 
         private void btn_triangle_Click(object sender, EventArgs e)
@@ -55,12 +57,34 @@ namespace GUI_Application
 
         private void openImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            OpenFileDialog o = new OpenFileDialog();
+            o.Filter = "PNG Files|*.png|JPEG Files|*.jpeg|Bitmap|*.bmp";
+            if (o.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                pictureBox1.BackgroundImage = (Image)Image.FromFile(o.FileName).Clone();
+                pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            MessageBox.Show("open");
         }
 
         private void saveImageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            SaveFileDialog sfdlg = new SaveFileDialog();
+            sfdlg.Title = "Save Dialog";
+            sfdlg.Filter = "Bitmap Images (*.bmp)|*.bmp|All files(*.*)|*.*";
+            if (sfdlg.ShowDialog(this) == DialogResult.OK)
+            {
+                using (Bitmap bmp = new Bitmap(pictureBox1.Width, pictureBox1.Height))
+                {
+
+                    //drawareapanel.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
+                    pictureBox1.Image = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    pictureBox1.Image.Save(sfdlg.FileName);
+                    bmp.Save(sfdlg.FileName);
+                    MessageBox.Show("Saved Successfully.....");
+
+                }
+            }
         }
 
         private void showtexturebox_Click(object sender, EventArgs e)
@@ -161,12 +185,50 @@ namespace GUI_Application
 
         }
 
-        //\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
         //==============================================================================================================
         //======================-----=====----======================DECLARING =========================---------- *  *  * * * * ** * 
         public int _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10, _size11, _size12;
 
+        private void saveTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sv = new SaveFileDialog();
+            sv.Filter = "Text Document(*.txt)|*.txt|All Files(*.*)|*.*";
+            if (sv.ShowDialog() == DialogResult.OK)
+            {
+                rtxt_console.SaveFile(sv.FileName, RichTextBoxStreamType.PlainText);
+                this.Text = sv.FileName;
+            }
+        }
+
+        private void openTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            if (op.ShowDialog() == DialogResult.OK)
+            {
+                rtxt_console.LoadFile(op.FileName, RichTextBoxStreamType.PlainText);
+                this.Text = op.FileName;
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog sv = new SaveFileDialog();
+            sv.Filter = "Text Document(*.txt)|*.txt|All Files(*.*)|*.*";
+            if (sv.ShowDialog() == DialogResult.OK)
+            {
+                rtxt_console.SaveFile(sv.FileName, RichTextBoxStreamType.PlainText);
+                this.Text = sv.FileName;
+            }
+        }
+
+        private void btnclear_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image = null;
+        }
+
+        public int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
         public int d1, d2;
+        public int _repeatNo;
         private void btn_consolerun_Click(object sender, EventArgs e)
         {
             Regex regex1 = new Regex(@"drawto (.*[\d])([,])(.*[\d]) line (.*[\d])([,])(.*[\d])");
@@ -456,8 +518,8 @@ namespace GUI_Application
                     _size1 = int.Parse(matchMT.Groups[1].Value);
                     _size2 = int.Parse(matchMT.Groups[3].Value);
 
-                    lbl_StartPosX.Text = _size1.ToString();
-                    lbl_StartPosY.Text = _size2.ToString();
+                   d1 = _size1;
+                    d2 = _size2;
                 }
                 catch (Exception ex)
                 {
@@ -569,8 +631,8 @@ namespace GUI_Application
                             //g = drawareapanel.CreateGraphics();
                             checkX = int.Parse(matchIfelse.Groups[1].Value);
                             checkY = int.Parse(matchIfelse.Groups[2].Value);
-                            lbl_StartPosX.Text = checkX.ToString();
-                            lbl_StartPosY.Text = checkY.ToString();
+                           d1 = checkX;
+                            d2 = checkY;
                             _size1 = checkX;
                             _size2 = checkY;
                             if (checkX > 0 && checkY > 0)
@@ -599,7 +661,7 @@ namespace GUI_Application
                                     }
                                     catch (Exception ex)
                                     {
-                                        tabcontrol.AppendText(ex.Message + Environment.NewLine);
+                                        rtxt_errors.AppendText(ex.Message + Environment.NewLine);
                                         // MessageBox.Show(ex.Message);
                                     }
 
@@ -620,7 +682,7 @@ namespace GUI_Application
                                     }
                                     catch (Exception ex)
                                     {
-                                        tabcontrol.AppendText(ex.Message + Environment.NewLine);
+                                        rtxt_errors.AppendText(ex.Message + Environment.NewLine);
                                     }
 
                                 }
@@ -644,7 +706,7 @@ namespace GUI_Application
                         }
                         catch (Exception ex)
                         {
-                            tabcontrol.AppendText(ex.Message + Environment.NewLine);
+                            rtxt_errors.AppendText(ex.Message + Environment.NewLine);
                             //MessageBox.Show(ex.Message);
                         }
 
@@ -654,7 +716,7 @@ namespace GUI_Application
                 catch (Exception ex)
                 {
 
-                    tabcontrol.AppendText(ex.Message + Environment.NewLine);
+                    rtxt_errors.AppendText(ex.Message + Environment.NewLine);
                 }
             }
 

@@ -97,9 +97,9 @@
             // 
             this.btngui.BackColor = System.Drawing.Color.NavajoWhite;
             this.btngui.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngui.Location = new System.Drawing.Point(183, 73);
+            this.btngui.Location = new System.Drawing.Point(183, 77);
             this.btngui.Name = "btngui";
-            this.btngui.Size = new System.Drawing.Size(604, 257);
+            this.btngui.Size = new System.Drawing.Size(653, 198);
             this.btngui.TabIndex = 6;
             this.btngui.Text = "GUI Based & Command Based";
             this.btngui.UseVisualStyleBackColor = false;

@@ -59,8 +59,10 @@
             this.btn_consolerun = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.rtxt_history = new System.Windows.Forms.RichTextBox();
             this.tabcontrol = new System.Windows.Forms.TabPage();
             this.rtxt_errors = new System.Windows.Forms.RichTextBox();
+            this.btnclear = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
@@ -68,6 +70,7 @@
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.tabcontrol.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,7 +85,7 @@
             this.panel3.Location = new System.Drawing.Point(13, 72);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(45, 538);
+            this.panel3.Size = new System.Drawing.Size(45, 280);
             this.panel3.TabIndex = 4;
             // 
             // btn_pen
@@ -250,7 +253,7 @@
             this.openImageToolStripMenuItem,
             this.openTextToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // openImageToolStripMenuItem
@@ -265,6 +268,7 @@
             this.openTextToolStripMenuItem.Name = "openTextToolStripMenuItem";
             this.openTextToolStripMenuItem.Size = new System.Drawing.Size(266, 42);
             this.openTextToolStripMenuItem.Text = "Open Text";
+            this.openTextToolStripMenuItem.Click += new System.EventHandler(this.openTextToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
             // 
@@ -272,7 +276,7 @@
             this.saveImageToolStripMenuItem,
             this.saveTextToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveImageToolStripMenuItem
@@ -287,6 +291,7 @@
             this.saveTextToolStripMenuItem.Name = "saveTextToolStripMenuItem";
             this.saveTextToolStripMenuItem.Size = new System.Drawing.Size(257, 42);
             this.saveTextToolStripMenuItem.Text = "Save Text";
+            this.saveTextToolStripMenuItem.Click += new System.EventHandler(this.saveTextToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -348,6 +353,7 @@
             this.button2.TabIndex = 20;
             this.button2.Text = "Save";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_consolerun
             // 
@@ -372,12 +378,21 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.rtxt_history);
             this.tabPage4.Location = new System.Drawing.Point(4, 29);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Size = new System.Drawing.Size(263, 194);
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "History";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // rtxt_history
+            // 
+            this.rtxt_history.Location = new System.Drawing.Point(3, 3);
+            this.rtxt_history.Name = "rtxt_history";
+            this.rtxt_history.Size = new System.Drawing.Size(257, 195);
+            this.rtxt_history.TabIndex = 0;
+            this.rtxt_history.Text = "";
             // 
             // tabcontrol
             // 
@@ -397,11 +412,22 @@
             this.rtxt_errors.TabIndex = 1;
             this.rtxt_errors.Text = "";
             // 
+            // btnclear
+            // 
+            this.btnclear.Location = new System.Drawing.Point(0, 360);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(75, 34);
+            this.btnclear.TabIndex = 23;
+            this.btnclear.Text = "Clear";
+            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
+            // 
             // GUI_Based
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 614);
+            this.Controls.Add(this.btnclear);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btn_consolerun);
             this.Controls.Add(this.button2);
@@ -426,6 +452,7 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
+            this.tabPage4.ResumeLayout(false);
             this.tabcontrol.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -465,5 +492,7 @@
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabcontrol;
         private System.Windows.Forms.RichTextBox rtxt_errors;
+        private System.Windows.Forms.Button btnclear;
+        private System.Windows.Forms.RichTextBox rtxt_history;
     }
 }
