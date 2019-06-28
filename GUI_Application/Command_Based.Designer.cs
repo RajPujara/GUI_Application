@@ -93,16 +93,16 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(326, 99);
+            this.panel1.Location = new System.Drawing.Point(307, 99);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 507);
+            this.panel1.Size = new System.Drawing.Size(481, 507);
             this.panel1.TabIndex = 10;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Location = new System.Drawing.Point(5, 383);
+            this.tabControl1.Location = new System.Drawing.Point(5, 379);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(271, 227);
@@ -211,7 +211,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 684);
+            this.ClientSize = new System.Drawing.Size(1425, 684);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);

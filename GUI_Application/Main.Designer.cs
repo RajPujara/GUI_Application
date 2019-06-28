@@ -35,7 +35,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btngui = new System.Windows.Forms.Button();
-            this.btncmd = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.icon)).BeginInit();
             this.panel3.SuspendLayout();
@@ -89,7 +88,6 @@
             // 
             this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
             this.panel3.Controls.Add(this.btngui);
-            this.panel3.Controls.Add(this.btncmd);
             this.panel3.Location = new System.Drawing.Point(0, 88);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1049, 478);
@@ -99,25 +97,13 @@
             // 
             this.btngui.BackColor = System.Drawing.Color.NavajoWhite;
             this.btngui.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngui.Location = new System.Drawing.Point(239, 266);
+            this.btngui.Location = new System.Drawing.Point(183, 73);
             this.btngui.Name = "btngui";
-            this.btngui.Size = new System.Drawing.Size(623, 156);
+            this.btngui.Size = new System.Drawing.Size(604, 257);
             this.btngui.TabIndex = 6;
-            this.btngui.Text = "GUI Based";
+            this.btngui.Text = "GUI Based & Command Based";
             this.btngui.UseVisualStyleBackColor = false;
             this.btngui.Click += new System.EventHandler(this.btngui_Click);
-            // 
-            // btncmd
-            // 
-            this.btncmd.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btncmd.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Italic);
-            this.btncmd.Location = new System.Drawing.Point(239, 38);
-            this.btncmd.Name = "btncmd";
-            this.btncmd.Size = new System.Drawing.Size(614, 163);
-            this.btncmd.TabIndex = 0;
-            this.btncmd.Text = "Command Based";
-            this.btncmd.UseVisualStyleBackColor = false;
-            this.btncmd.Click += new System.EventHandler(this.btncmd_Click);
             // 
             // Main
             // 
@@ -146,7 +132,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btngui;
-        private System.Windows.Forms.Button btncmd;
         private System.Windows.Forms.PictureBox icon;
     }
 }

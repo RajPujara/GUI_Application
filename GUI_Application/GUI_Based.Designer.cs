@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GUI_Based));
-            this.drawareapanel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btn_pen = new System.Windows.Forms.Button();
             this.btn_polygon = new System.Windows.Forms.Button();
@@ -53,21 +52,24 @@
             this.saveTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutUSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.rtxt_console = new System.Windows.Forms.RichTextBox();
+            this.btn_console1clear = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btn_consolerun = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabcontrol = new System.Windows.Forms.TabPage();
+            this.rtxt_errors = new System.Windows.Forms.RichTextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabcontrol.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // drawareapanel
-            // 
-            this.drawareapanel.BackColor = System.Drawing.Color.White;
-            this.drawareapanel.Location = new System.Drawing.Point(94, 155);
-            this.drawareapanel.Name = "drawareapanel";
-            this.drawareapanel.Size = new System.Drawing.Size(668, 451);
-            this.drawareapanel.TabIndex = 1;
-            this.drawareapanel.Paint += new System.Windows.Forms.PaintEventHandler(this.drawareapanel_Paint);
             // 
             // panel3
             // 
@@ -77,10 +79,10 @@
             this.panel3.Controls.Add(this.btn_elipse);
             this.panel3.Controls.Add(this.btn_square);
             this.panel3.Controls.Add(this.btn_Rectangle);
-            this.panel3.Location = new System.Drawing.Point(13, 155);
+            this.panel3.Location = new System.Drawing.Point(13, 72);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(45, 311);
+            this.panel3.Size = new System.Drawing.Size(45, 538);
             this.panel3.TabIndex = 4;
             // 
             // btn_pen
@@ -96,6 +98,7 @@
             this.btn_pen.TabIndex = 7;
             this.btn_pen.UseVisualStyleBackColor = true;
             this.btn_pen.Click += new System.EventHandler(this.btn_pen_Click);
+            this.btn_pen.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_pen_MouseMove);
             // 
             // btn_polygon
             // 
@@ -171,7 +174,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(89, 95);
+            this.label1.Location = new System.Drawing.Point(89, 72);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 25);
             this.label1.TabIndex = 5;
@@ -181,7 +184,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.Location = new System.Drawing.Point(280, 95);
+            this.label2.Location = new System.Drawing.Point(280, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 7;
@@ -192,7 +195,7 @@
             this.showtexturebox.BackColor = System.Drawing.Color.Black;
             this.showtexturebox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("showtexturebox.BackgroundImage")));
             this.showtexturebox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.showtexturebox.Location = new System.Drawing.Point(401, 95);
+            this.showtexturebox.Location = new System.Drawing.Point(401, 72);
             this.showtexturebox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.showtexturebox.Name = "showtexturebox";
             this.showtexturebox.Size = new System.Drawing.Size(32, 32);
@@ -203,7 +206,7 @@
             // showcolorbox
             // 
             this.showcolorbox.BackColor = System.Drawing.Color.Black;
-            this.showcolorbox.Location = new System.Drawing.Point(180, 95);
+            this.showcolorbox.Location = new System.Drawing.Point(180, 72);
             this.showcolorbox.Name = "showcolorbox";
             this.showcolorbox.Size = new System.Drawing.Size(39, 32);
             this.showcolorbox.TabIndex = 15;
@@ -215,7 +218,7 @@
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Location = new System.Drawing.Point(0, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(799, 68);
+            this.panel1.Size = new System.Drawing.Size(799, 50);
             this.panel1.TabIndex = 16;
             // 
             // menuStrip1
@@ -247,7 +250,7 @@
             this.openImageToolStripMenuItem,
             this.openTextToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // openImageToolStripMenuItem
@@ -269,7 +272,7 @@
             this.saveImageToolStripMenuItem,
             this.saveTextToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveImageToolStripMenuItem
@@ -298,25 +301,122 @@
             // aboutUSToolStripMenuItem
             // 
             this.aboutUSToolStripMenuItem.Name = "aboutUSToolStripMenuItem";
-            this.aboutUSToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
+            this.aboutUSToolStripMenuItem.Size = new System.Drawing.Size(232, 42);
             this.aboutUSToolStripMenuItem.Text = "About US";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.Location = new System.Drawing.Point(94, 130);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(675, 498);
+            this.pictureBox1.TabIndex = 17;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+            // 
+            // rtxt_console
+            // 
+            this.rtxt_console.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.rtxt_console.ForeColor = System.Drawing.Color.Red;
+            this.rtxt_console.Location = new System.Drawing.Point(844, 112);
+            this.rtxt_console.Name = "rtxt_console";
+            this.rtxt_console.Size = new System.Drawing.Size(271, 213);
+            this.rtxt_console.TabIndex = 18;
+            this.rtxt_console.Text = "";
+            this.rtxt_console.TextChanged += new System.EventHandler(this.rtxt_console_TextChanged);
+            // 
+            // btn_console1clear
+            // 
+            this.btn_console1clear.Location = new System.Drawing.Point(844, 344);
+            this.btn_console1clear.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_console1clear.Name = "btn_console1clear";
+            this.btn_console1clear.Size = new System.Drawing.Size(74, 35);
+            this.btn_console1clear.TabIndex = 19;
+            this.btn_console1clear.Text = "Clear";
+            this.btn_console1clear.UseVisualStyleBackColor = true;
+            this.btn_console1clear.Click += new System.EventHandler(this.btn_console1clear_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(946, 344);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(74, 35);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "Save";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btn_consolerun
+            // 
+            this.btn_consolerun.Location = new System.Drawing.Point(1057, 344);
+            this.btn_consolerun.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_consolerun.Name = "btn_consolerun";
+            this.btn_consolerun.Size = new System.Drawing.Size(74, 35);
+            this.btn_consolerun.TabIndex = 21;
+            this.btn_consolerun.Text = "Run";
+            this.btn_consolerun.UseVisualStyleBackColor = true;
+            this.btn_consolerun.Click += new System.EventHandler(this.btn_consolerun_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabcontrol);
+            this.tabControl1.Location = new System.Drawing.Point(844, 387);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(271, 227);
+            this.tabControl1.TabIndex = 22;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Location = new System.Drawing.Point(4, 29);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(263, 194);
+            this.tabPage4.TabIndex = 0;
+            this.tabPage4.Text = "History";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabcontrol
+            // 
+            this.tabcontrol.Controls.Add(this.rtxt_errors);
+            this.tabcontrol.Location = new System.Drawing.Point(4, 29);
+            this.tabcontrol.Name = "tabcontrol";
+            this.tabcontrol.Size = new System.Drawing.Size(263, 194);
+            this.tabcontrol.TabIndex = 1;
+            this.tabcontrol.Text = "Error";
+            this.tabcontrol.UseVisualStyleBackColor = true;
+            // 
+            // rtxt_errors
+            // 
+            this.rtxt_errors.Location = new System.Drawing.Point(3, 3);
+            this.rtxt_errors.Name = "rtxt_errors";
+            this.rtxt_errors.Size = new System.Drawing.Size(257, 188);
+            this.rtxt_errors.TabIndex = 1;
+            this.rtxt_errors.Text = "";
             // 
             // GUI_Based
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 643);
+            this.ClientSize = new System.Drawing.Size(1189, 614);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.btn_consolerun);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btn_console1clear);
+            this.Controls.Add(this.rtxt_console);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.showcolorbox);
             this.Controls.Add(this.showtexturebox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.drawareapanel);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "GUI_Based";
             this.Text = "GUI_Based";
-            //this.Load += new System.EventHandler(this.GUI_Based_Load);
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).EndInit();
@@ -324,13 +424,15 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabcontrol.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Panel drawareapanel;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button btn_pen;
         private System.Windows.Forms.Button btn_polygon;
@@ -354,5 +456,14 @@
         private System.Windows.Forms.ToolStripMenuItem saveTextToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutUSToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.RichTextBox rtxt_console;
+        private System.Windows.Forms.Button btn_console1clear;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_consolerun;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabPage tabcontrol;
+        private System.Windows.Forms.RichTextBox rtxt_errors;
     }
 }
