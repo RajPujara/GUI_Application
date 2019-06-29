@@ -9,6 +9,7 @@ namespace GUI_Application
 {
     class Triangle: Shape
     {
+        int size1, size2, size3, size4, size5, size6, size7, size8, size9, size10;
         int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
         Color c1;
         int texturestyle;
@@ -34,7 +35,7 @@ namespace GUI_Application
         /// <param name="list"></param>
         public override void set(int texturestyle, Brush bb, Color c1, params int[] list)
         {
-            //_size1, _size2, xi1,yi1,xi2,yi2,xii1,yii1,xii2,yii2,xiii1,yiii1,xiii2,yiii2
+          //-size1, -size2, xi1,yi1,xi2,yi2,xii1,yii1,xii2,yii2,xiii1,yiii1,xiii2,yiii2
             this.texturestyle = texturestyle;
             this.bb = bb;
             this.c1 = c1;

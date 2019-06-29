@@ -13,6 +13,11 @@ namespace GUI_Application
         int texturestyle;
         Brush bb;
         Color c1;
+
+        public Rectangle(int v1, int v2, int v3, int v4)
+        {
+        }
+
         /// <summary>
         /// getting value of Graphics g
         /// </summary>

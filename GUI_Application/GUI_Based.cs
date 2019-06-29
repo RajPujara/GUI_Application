@@ -41,8 +41,9 @@ namespace GUI_Application
         private void btn_elipse_Click(object sender, EventArgs e)
         {
             //selectshape = 4;
+            g.DrawEllipse(Pens.Blue, 10, 10, 100, 80);
 
-
+           
         }
 
         private void btn_triangle_Click(object sender, EventArgs e)
@@ -188,6 +189,19 @@ namespace GUI_Application
         //==============================================================================================================
         //======================-----=====----======================DECLARING =========================---------- *  *  * * * * ** * 
         public int _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10, _size11, _size12;
+
+        private void btngit_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/RajPujara/GUI_Application/commits/master");
+                
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            texturestyle = 1;
+            bb = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
+            showtexturebox.BackgroundImage = texture1.BackgroundImage;
+        }
 
         private void saveTextToolStripMenuItem_Click(object sender, EventArgs e)
         {

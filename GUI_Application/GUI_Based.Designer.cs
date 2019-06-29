@@ -63,6 +63,16 @@
             this.tabcontrol = new System.Windows.Forms.TabPage();
             this.rtxt_errors = new System.Windows.Forms.RichTextBox();
             this.btnclear = new System.Windows.Forms.Button();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.texture5 = new System.Windows.Forms.PictureBox();
+            this.texture4 = new System.Windows.Forms.PictureBox();
+            this.texture3 = new System.Windows.Forms.PictureBox();
+            this.texture2 = new System.Windows.Forms.PictureBox();
+            this.texture1 = new System.Windows.Forms.PictureBox();
+            this.btngit = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
@@ -72,6 +82,13 @@
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.tabcontrol.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.texture5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -192,6 +209,7 @@
             this.label2.Size = new System.Drawing.Size(93, 25);
             this.label2.TabIndex = 7;
             this.label2.Text = "Texture:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // showtexturebox
             // 
@@ -218,6 +236,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btngit);
             this.panel1.Controls.Add(this.menuStrip1);
             this.panel1.Location = new System.Drawing.Point(0, 4);
             this.panel1.Name = "panel1";
@@ -370,6 +389,8 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabcontrol);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(844, 387);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -422,6 +443,117 @@
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.texture5);
+            this.tabPage1.Controls.Add(this.texture4);
+            this.tabPage1.Controls.Add(this.texture3);
+            this.tabPage1.Controls.Add(this.texture2);
+            this.tabPage1.Controls.Add(this.texture1);
+            this.tabPage1.Controls.Add(this.richTextBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(263, 194);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "Texture";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.richTextBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(263, 194);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "3D";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(257, 188);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(263, 194);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
+            // 
+            // texture5
+            // 
+            this.texture5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture5.BackgroundImage")));
+            this.texture5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture5.Location = new System.Drawing.Point(13, 64);
+            this.texture5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.texture5.Name = "texture5";
+            this.texture5.Size = new System.Drawing.Size(45, 46);
+            this.texture5.TabIndex = 10;
+            this.texture5.TabStop = false;
+            // 
+            // texture4
+            // 
+            this.texture4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture4.BackgroundImage")));
+            this.texture4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture4.Location = new System.Drawing.Point(204, 8);
+            this.texture4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.texture4.Name = "texture4";
+            this.texture4.Size = new System.Drawing.Size(45, 46);
+            this.texture4.TabIndex = 9;
+            this.texture4.TabStop = false;
+            // 
+            // texture3
+            // 
+            this.texture3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture3.BackgroundImage")));
+            this.texture3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture3.Location = new System.Drawing.Point(139, 8);
+            this.texture3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.texture3.Name = "texture3";
+            this.texture3.Size = new System.Drawing.Size(45, 46);
+            this.texture3.TabIndex = 8;
+            this.texture3.TabStop = false;
+            // 
+            // texture2
+            // 
+            this.texture2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture2.BackgroundImage")));
+            this.texture2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture2.Location = new System.Drawing.Point(75, 8);
+            this.texture2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.texture2.Name = "texture2";
+            this.texture2.Size = new System.Drawing.Size(45, 46);
+            this.texture2.TabIndex = 7;
+            this.texture2.TabStop = false;
+            // 
+            // texture1
+            // 
+            this.texture1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture1.BackgroundImage")));
+            this.texture1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.texture1.Location = new System.Drawing.Point(13, 8);
+            this.texture1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.texture1.Name = "texture1";
+            this.texture1.Size = new System.Drawing.Size(45, 46);
+            this.texture1.TabIndex = 6;
+            this.texture1.TabStop = false;
+            // 
+            // btngit
+            // 
+            this.btngit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngit.ForeColor = System.Drawing.Color.Coral;
+            this.btngit.Location = new System.Drawing.Point(688, 0);
+            this.btngit.Name = "btngit";
+            this.btngit.Size = new System.Drawing.Size(108, 46);
+            this.btngit.TabIndex = 1;
+            this.btngit.Text = "Github";
+            this.btngit.UseVisualStyleBackColor = true;
+            this.btngit.Click += new System.EventHandler(this.btngit_Click);
+            // 
             // GUI_Based
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -454,6 +586,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
             this.tabcontrol.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.texture5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.texture1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,5 +633,15 @@
         private System.Windows.Forms.RichTextBox rtxt_errors;
         private System.Windows.Forms.Button btnclear;
         private System.Windows.Forms.RichTextBox rtxt_history;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
+        private System.Windows.Forms.PictureBox texture5;
+        private System.Windows.Forms.PictureBox texture4;
+        private System.Windows.Forms.PictureBox texture3;
+        private System.Windows.Forms.PictureBox texture2;
+        private System.Windows.Forms.PictureBox texture1;
+        private System.Windows.Forms.Button btngit;
     }
 }
