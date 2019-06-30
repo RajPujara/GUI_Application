@@ -99,9 +99,9 @@
             this.btngui.Font = new System.Drawing.Font("Candara", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btngui.Location = new System.Drawing.Point(183, 77);
             this.btngui.Name = "btngui";
-            this.btngui.Size = new System.Drawing.Size(653, 198);
+            this.btngui.Size = new System.Drawing.Size(767, 289);
             this.btngui.TabIndex = 6;
-            this.btngui.Text = "GUI Based & Command Based";
+            this.btngui.Text = "GUI Based And Command Based Application";
             this.btngui.UseVisualStyleBackColor = false;
             this.btngui.Click += new System.EventHandler(this.btngui_Click);
             // 

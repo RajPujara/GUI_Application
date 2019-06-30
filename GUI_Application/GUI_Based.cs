@@ -190,6 +190,47 @@ namespace GUI_Application
         //======================-----=====----======================DECLARING =========================---------- *  *  * * * * ** * 
         public int _size1, _size2, _size3, _size4, _size5, _size6, _size7, _size8, _size9, _size10, _size11, _size12;
 
+        private void texture1_Click(object sender, EventArgs e)
+        {
+            texturestyle = 1;
+            bb = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
+            showtexturebox.BackgroundImage = texture1.BackgroundImage;
+        }
+
+        private void texture2_Click(object sender, EventArgs e)
+        {
+            bb = new HatchBrush(HatchStyle.DiagonalCross, Color.Red, Color.Yellow);
+            texturestyle = 2;
+            showtexturebox.BackgroundImage = texture2.BackgroundImage;
+        }
+
+        private void texture3_Click(object sender, EventArgs e)
+        {
+            bb = new HatchBrush(HatchStyle.ForwardDiagonal, Color.Red, Color.Yellow);
+            texturestyle = 3;
+            showtexturebox.BackgroundImage = texture3.BackgroundImage;
+        }
+
+        private void texture4_Click(object sender, EventArgs e)
+        {
+            texturestyle = 4;
+            bb = new HatchBrush(HatchStyle.Horizontal, Color.Red, Color.Yellow);
+            showtexturebox.BackgroundImage = texture4.BackgroundImage;
+        }
+
+        private void texture5_Click(object sender, EventArgs e)
+        {
+            texturestyle = 5;
+            bb = new HatchBrush(HatchStyle.Vertical, Color.Red, Color.Yellow);
+            showtexturebox.BackgroundImage = texture5.BackgroundImage;
+        }
+
+        private void aboutUSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutUS au = new AboutUS();
+            au.Show();
+        }
+
         private void btngit_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://github.com/RajPujara/GUI_Application/commits/master");

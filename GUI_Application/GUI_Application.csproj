@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUS.Designer.cs">
+      <DependentUpon>AboutUS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Circle.cs" />
     <Compile Include="Command_Based.cs">
       <SubType>Form</SubType>
@@ -73,6 +79,9 @@
     <Compile Include="Shape.cs" />
     <Compile Include="ShapeFactory.cs" />
     <Compile Include="Triangle.cs" />
+    <EmbeddedResource Include="AboutUS.resx">
+      <DependentUpon>AboutUS.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Command_Based.resx">
       <DependentUpon>Command_Based.cs</DependentUpon>
     </EmbeddedResource>

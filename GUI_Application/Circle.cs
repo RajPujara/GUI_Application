@@ -11,12 +11,12 @@ namespace GUI_Application
     /// exdending shape class
     /// </summary>
 
-    class Circle : Shape
+    public class Circle : Shape
     {
         /// <summary>
         /// getting value in variable for ellipse
         /// </summary>
-        int x, y, size, size1;
+       public int x, y, size, size1;
         Color c1;
         int texturestyle;
         Brush bb;

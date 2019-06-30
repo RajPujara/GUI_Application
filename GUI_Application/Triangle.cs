@@ -7,10 +7,10 @@ using System.Drawing;
 
 namespace GUI_Application
 {
-    class Triangle: Shape
+    public class Triangle: Shape
     {
-        int size1, size2, size3, size4, size5, size6, size7, size8, size9, size10;
-        int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
+     //   public int size1, size2, size3, size4, size5, size6, size7, size8, size9, size10;
+        public int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
         Color c1;
         int texturestyle;
         Brush bb;

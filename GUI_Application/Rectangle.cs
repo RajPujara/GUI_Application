@@ -7,12 +7,16 @@ using System.Drawing;
 
 namespace GUI_Application
 {
-    class Rectangle: Shape
+    public class Rectangle: Shape
     {
-        int x, y, size, size1;
+        public int x, y, size, size1;
         int texturestyle;
         Brush bb;
         Color c1;
+
+        public Rectangle()
+        {
+        }
 
         public Rectangle(int v1, int v2, int v3, int v4)
         {

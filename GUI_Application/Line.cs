@@ -7,12 +7,12 @@ using System.Drawing;
 
 namespace GUI_Application
 {
-    class Line : Shape
+   public class Line : Shape
     {
         /// <summary>
         /// geting value for drawing line
         /// </summary>
-        int x, y, size, size1;
+        public int x, y, size, size1;
         Color c1;
         int texturestyle;
         Brush bb;

@@ -42,6 +42,7 @@
             this.showcolorbox = new System.Windows.Forms.PictureBox();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btngit = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,17 +63,16 @@
             this.rtxt_history = new System.Windows.Forms.RichTextBox();
             this.tabcontrol = new System.Windows.Forms.TabPage();
             this.rtxt_errors = new System.Windows.Forms.RichTextBox();
-            this.btnclear = new System.Windows.Forms.Button();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.texture5 = new System.Windows.Forms.PictureBox();
             this.texture4 = new System.Windows.Forms.PictureBox();
             this.texture3 = new System.Windows.Forms.PictureBox();
             this.texture2 = new System.Windows.Forms.PictureBox();
             this.texture1 = new System.Windows.Forms.PictureBox();
-            this.btngit = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.btnclear = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
@@ -83,12 +83,12 @@
             this.tabPage4.SuspendLayout();
             this.tabcontrol.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.texture5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
@@ -243,6 +243,18 @@
             this.panel1.Size = new System.Drawing.Size(799, 50);
             this.panel1.TabIndex = 16;
             // 
+            // btngit
+            // 
+            this.btngit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngit.ForeColor = System.Drawing.Color.Coral;
+            this.btngit.Location = new System.Drawing.Point(688, 0);
+            this.btngit.Name = "btngit";
+            this.btngit.Size = new System.Drawing.Size(108, 46);
+            this.btngit.TabIndex = 1;
+            this.btngit.Text = "Github";
+            this.btngit.UseVisualStyleBackColor = true;
+            this.btngit.Click += new System.EventHandler(this.btngit_Click);
+            // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
@@ -272,7 +284,7 @@
             this.openImageToolStripMenuItem,
             this.openTextToolStripMenuItem});
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
             this.openToolStripMenuItem.Text = "Open";
             // 
             // openImageToolStripMenuItem
@@ -295,7 +307,7 @@
             this.saveImageToolStripMenuItem,
             this.saveTextToolStripMenuItem});
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(252, 42);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(176, 42);
             this.saveToolStripMenuItem.Text = "Save";
             // 
             // saveImageToolStripMenuItem
@@ -327,6 +339,7 @@
             this.aboutUSToolStripMenuItem.Name = "aboutUSToolStripMenuItem";
             this.aboutUSToolStripMenuItem.Size = new System.Drawing.Size(232, 42);
             this.aboutUSToolStripMenuItem.Text = "About US";
+            this.aboutUSToolStripMenuItem.Click += new System.EventHandler(this.aboutUSToolStripMenuItem_Click);
             // 
             // pictureBox1
             // 
@@ -433,16 +446,6 @@
             this.rtxt_errors.TabIndex = 1;
             this.rtxt_errors.Text = "";
             // 
-            // btnclear
-            // 
-            this.btnclear.Location = new System.Drawing.Point(0, 360);
-            this.btnclear.Name = "btnclear";
-            this.btnclear.Size = new System.Drawing.Size(75, 34);
-            this.btnclear.TabIndex = 23;
-            this.btnclear.Text = "Clear";
-            this.btnclear.UseVisualStyleBackColor = true;
-            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
-            // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.texture5);
@@ -459,34 +462,6 @@
             this.tabPage1.Text = "Texture";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.richTextBox2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(263, 194);
-            this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "3D";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(257, 188);
-            this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "";
-            // 
-            // richTextBox2
-            // 
-            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(263, 194);
-            this.richTextBox2.TabIndex = 0;
-            this.richTextBox2.Text = "";
-            // 
             // texture5
             // 
             this.texture5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("texture5.BackgroundImage")));
@@ -497,6 +472,7 @@
             this.texture5.Size = new System.Drawing.Size(45, 46);
             this.texture5.TabIndex = 10;
             this.texture5.TabStop = false;
+            this.texture5.Click += new System.EventHandler(this.texture5_Click);
             // 
             // texture4
             // 
@@ -508,6 +484,7 @@
             this.texture4.Size = new System.Drawing.Size(45, 46);
             this.texture4.TabIndex = 9;
             this.texture4.TabStop = false;
+            this.texture4.Click += new System.EventHandler(this.texture4_Click);
             // 
             // texture3
             // 
@@ -519,6 +496,7 @@
             this.texture3.Size = new System.Drawing.Size(45, 46);
             this.texture3.TabIndex = 8;
             this.texture3.TabStop = false;
+            this.texture3.Click += new System.EventHandler(this.texture3_Click);
             // 
             // texture2
             // 
@@ -530,6 +508,7 @@
             this.texture2.Size = new System.Drawing.Size(45, 46);
             this.texture2.TabIndex = 7;
             this.texture2.TabStop = false;
+            this.texture2.Click += new System.EventHandler(this.texture2_Click);
             // 
             // texture1
             // 
@@ -541,18 +520,45 @@
             this.texture1.Size = new System.Drawing.Size(45, 46);
             this.texture1.TabIndex = 6;
             this.texture1.TabStop = false;
+            this.texture1.Click += new System.EventHandler(this.texture1_Click);
             // 
-            // btngit
+            // richTextBox1
             // 
-            this.btngit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngit.ForeColor = System.Drawing.Color.Coral;
-            this.btngit.Location = new System.Drawing.Point(688, 0);
-            this.btngit.Name = "btngit";
-            this.btngit.Size = new System.Drawing.Size(108, 46);
-            this.btngit.TabIndex = 1;
-            this.btngit.Text = "Github";
-            this.btngit.UseVisualStyleBackColor = true;
-            this.btngit.Click += new System.EventHandler(this.btngit_Click);
+            this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(257, 188);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.richTextBox2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(263, 194);
+            this.tabPage2.TabIndex = 3;
+            this.tabPage2.Text = "3D";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox2.Location = new System.Drawing.Point(0, 0);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(263, 194);
+            this.richTextBox2.TabIndex = 0;
+            this.richTextBox2.Text = "";
+            // 
+            // btnclear
+            // 
+            this.btnclear.Location = new System.Drawing.Point(0, 360);
+            this.btnclear.Name = "btnclear";
+            this.btnclear.Size = new System.Drawing.Size(75, 34);
+            this.btnclear.TabIndex = 23;
+            this.btnclear.Text = "Clear";
+            this.btnclear.UseVisualStyleBackColor = true;
+            this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
             // GUI_Based
             // 
@@ -587,12 +593,12 @@
             this.tabPage4.ResumeLayout(false);
             this.tabcontrol.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.texture5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.texture1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
