@@ -20,12 +20,17 @@ namespace GUI_Application
         private Point lastlocation;
         int texturestyle = 0;
 
+        bool paint = false;
+
+
+
         int selectshape = 0;
 
         /// <summary>
         /// for color dialog box
         /// </summary>
         Color paintcolor = Color.Black;
+
 
         Graphics g;
         Pen p;
@@ -144,14 +149,7 @@ namespace GUI_Application
                 }
                 else if (selectshape == 2)
                 {
-                    //g.DrawRectangle(p, Math.Min(e.X,x1), Math.Min(e.Y, y1),Math.Abs(e.X-x1), Math.Abs(e.Y - y1));
-
-                    //if (x>0 && y>0)
-                    //{
-                    //    g.DrawRectangle(p, x1, y1, x3, y3);
-                    //}
-
-                    //Invalidate();
+                    
                     if (x > 0 && y > 00)
                     {
 
@@ -225,6 +223,11 @@ namespace GUI_Application
             showtexturebox.BackgroundImage = texture5.BackgroundImage;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
         private void aboutUSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AboutUS au = new AboutUS();
@@ -239,9 +242,10 @@ namespace GUI_Application
 
         private void label2_Click(object sender, EventArgs e)
         {
-            texturestyle = 1;
-            bb = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
-            showtexturebox.BackgroundImage = texture1.BackgroundImage;
+            //texturestyle = 1;
+            //bb = new HatchBrush(HatchStyle.Cross, Color.Red, Color.Yellow);
+            //showtexturebox.BackgroundImage = texture1.BackgroundImage;
+            
         }
 
         private void saveTextToolStripMenuItem_Click(object sender, EventArgs e)
@@ -284,6 +288,10 @@ namespace GUI_Application
         public int xi1, yi1, xi2, yi2, xii1, yii1, xii2, yii2, xiii1, yiii1, xiii2, yiii2;
         public int d1, d2;
         public int _repeatNo;
+
+        public SolidBrush color { get; private set; }
+        public object Canvas { get; private set; }
+
         private void btn_consolerun_Click(object sender, EventArgs e)
         {
             Regex regex1 = new Regex(@"drawto (.*[\d])([,])(.*[\d]) line (.*[\d])([,])(.*[\d])");

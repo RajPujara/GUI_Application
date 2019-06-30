@@ -73,6 +73,9 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.btnclear = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblraisersize = new System.Windows.Forms.Label();
+            this.tbraiser = new System.Windows.Forms.TextBox();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.showtexturebox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.showcolorbox)).BeginInit();
@@ -346,7 +349,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.White;
             this.pictureBox1.Location = new System.Drawing.Point(94, 130);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(675, 498);
+            this.pictureBox1.Size = new System.Drawing.Size(675, 484);
             this.pictureBox1.TabIndex = 17;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
@@ -560,11 +563,42 @@
             this.btnclear.UseVisualStyleBackColor = true;
             this.btnclear.Click += new System.EventHandler(this.btnclear_Click);
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 416);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(87, 41);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Raiser";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // lblraisersize
+            // 
+            this.lblraisersize.AutoSize = true;
+            this.lblraisersize.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblraisersize.Location = new System.Drawing.Point(482, 75);
+            this.lblraisersize.Name = "lblraisersize";
+            this.lblraisersize.Size = new System.Drawing.Size(122, 25);
+            this.lblraisersize.TabIndex = 25;
+            this.lblraisersize.Text = "Raiser Size";
+            // 
+            // tbraiser
+            // 
+            this.tbraiser.Location = new System.Drawing.Point(617, 75);
+            this.tbraiser.Name = "tbraiser";
+            this.tbraiser.Size = new System.Drawing.Size(119, 26);
+            this.tbraiser.TabIndex = 26;
+            // 
             // GUI_Based
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1189, 614);
+            this.Controls.Add(this.tbraiser);
+            this.Controls.Add(this.lblraisersize);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnclear);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btn_consolerun);
@@ -649,5 +683,8 @@
         private System.Windows.Forms.PictureBox texture2;
         private System.Windows.Forms.PictureBox texture1;
         private System.Windows.Forms.Button btngit;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblraisersize;
+        private System.Windows.Forms.TextBox tbraiser;
     }
 }
